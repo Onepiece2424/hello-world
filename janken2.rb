@@ -3,7 +3,6 @@ def janken
     puts "じゃんけん..."
     puts "0:(グー) 1:(チョキ) 2:(パー) 3:(戦わない)"
     
-    
     my_hand = gets.to_i
     
     enemy_hand = rand(2)
@@ -14,10 +13,8 @@ def janken
     puts "--------------------------------------------------------------"
     puts "わたしの手:#{jankens[my_hand]}, あいての手:#{jankens[enemy_hand]}"
 
-      
       if my_hand<3
          
-    
         if (my_hand == enemy_hand) || my_hand == '3'
            
           puts 'あいこです'
@@ -35,14 +32,14 @@ def janken
           puts 'じゃんけんは、あなたの負けです。'
           puts "--------------------------------------------------------------"
           puts lose_pattern
-          
         end
         
         return true
         
       else
-      puts "0か1か2を選択してください"
+      　puts "0か1か2を選択してください"
       end
+
 end
 
 def win_pattern
@@ -90,7 +87,6 @@ def lose_pattern
     puts "もう1回"
   end
 end
-
 
 next_game = true
 
