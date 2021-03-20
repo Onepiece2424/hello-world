@@ -16,17 +16,14 @@ def janken
       if my_hand<3
          
         if (my_hand == enemy_hand) || my_hand == '3'
-           
           puts 'あいこです'
           puts "--------------------------------------------------------------"
           return true
           
-        
         elsif (my_hand == 0 && enemy_hand == 1) || (my_hand == 1 && enemy_hand == 2) ||(my_hand == 2 && enemy_hand == 0)
           puts 'じゃんけんは、あなたの勝ちです。'
           puts "--------------------------------------------------------------"
           puts win_pattern
-          
           
         elsif (my_hand == 0 && enemy_hand == 2) || (my_hand == 1 && enemy_hand == 0) ||(my_hand == 2 && enemy_hand == 1)
           puts 'じゃんけんは、あなたの負けです。'
@@ -39,7 +36,6 @@ def janken
       else
       　puts "0か1か2を選択してください"
       end
-
 end
 
 def win_pattern
