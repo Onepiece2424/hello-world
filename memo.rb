@@ -11,43 +11,29 @@ if memo_type == 1
     puts "拡張子を除いたファイルを入力してください"
     
     file_name = gets.chomp.to_s
-   
-    CSV.open("#{file_name} .csv", "w") do |csv|
-    
     
     puts "メモしたい内容を入力してください"
-    puts "完了したらCtrl + Dを押します"
+    puts "入力したらEnterを1回押してください"
     
-    
-    
-    memo_content = gets.chomp.to_s
-    
-    csv << ["#{memo_content}"]
-    
-    
-end
-    
-            
+    CSV.open("#{file_name} .csv", "w") do |csv|
+        memo_content = gets.chomp.to_s
+        csv << ["#{memo_content}"]
+    end
+
 elsif memo_type == 2
     
     puts "編集したいファイルを入力してください"
     
     edit_name = gets.chomp.to_s
+    
+    puts "追加したい内容を入力してください"
+    puts "入力したらEnterを1回押してください"
+
     CSV.open("#{edit_name} .csv", "a" ) do |csv|
-    
-    puts "メモしたい内容を入力してください"
-    puts "完了したらCtrl + Dを押します"
-    
-    edit_content = gets.chomp.to_s
-    
-    csv << ["#{edit_content}"]
-        
+        edit_content = gets.chomp.to_s
+        csv << ["#{edit_content}"]
     end
     
 else
     puts "再度入力してください。"
-
-            
 end
-
-
